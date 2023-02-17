@@ -12,12 +12,36 @@
     </header>
     <div id="content">
         <form class="salary-form" onsubmit="submitForm(event)">
-        
+            First Name: <input id="firstName-input" type="text" /> <br />
+            Last Name: <input id="lastName-input" type="text" /> <br /> 
+            ID Number: <input id="idNumber-input" type="number" /> <br />
+            Job Title: <input id="jobTitle-input" type="text" /> <br />
+            Annual Salary: <input id="salary-input" type="number" /> <br />
+            <input type="submit" value="Add Data" />
         </form>
-        <table id="employee-information">
+        <table id="employee-information-labels">
+            <thead>
+                <tr>
+                    <th>First Name:</th>
+                    <th>Last Name:</th>
+                    <th>ID Number:</th>
+                    <th>Job Title:</th>
+                    <th>Annual Salary:</th>
+                </tr>
+            </thead>
+            <tbody id="employee-information-output"> <!--a function will actually add this
+            information to the DOM, this currently is just to mark a place!-->
+                <tr>
+                    <td>
 
+                    </td>
+                </tr>
+            </tbody>
 
         </table>
+        <div>
+            <h3>Total Monthly</h3>
+        </div>
 
     </div>
 </body>
