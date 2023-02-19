@@ -27,4 +27,9 @@ employeeInfoTable.innerHTML += `
 
 `;
 
+    if (Number(annualSalary) > monthlyCost) {
+        monthlyCost = Number(annualSalary);
+        document.querySelector('#monthly-cost').innerHTML = monthlyCost
+    }
+
 }
