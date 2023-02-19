@@ -23,13 +23,19 @@ employeeInfoTable.innerHTML += `
         <td>${idNumber}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
+        <button onClick="deleteEmployee(event)" class="salary-form" data-delete=${event.target.dataset.submitForm}>Delete</button>
     </tr>
 
 `;
 
+function deleteEmployee(event) { 
+    let parent = event.target.parentElement
+    parent.remove()
+}
+    let monthlyCost = 20000
     if (Number(annualSalary) > monthlyCost) {
-        monthlyCost = Number(annualSalary);
-        document.querySelector('#monthly-cost').innerHTML = monthlyCost
+       let monthlyCost = event.target.parentElement
+       monthlyCost.style.backgroundColor = 'red'
     }
 
 }
