@@ -30,8 +30,10 @@ employeeInfoTable.innerHTML += `
 
 `;
 let monthlyCostSpan = document.querySelector('#monthly-cost')
-if (Number(annualSalary) > monthlyCost) {
-    monthlyCostSpan.innerHTML = Number(annualSalary)
+
+monthlyCostSpan.innerHTML += Number(annualSalary) / 12
+
+if (Number(annualSalary) / 12 > monthlyCost) {
     monthlyCostSpan.style.backgroundColor = 'red'
  }
 }
