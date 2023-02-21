@@ -28,14 +28,15 @@ employeeInfoTable.innerHTML += `
 
 `;
 
-function deleteEmployee(event) { 
-    let parent = event.target.parentElement
-    parent.remove()
-}
     let monthlyCost = 20000
     if (Number(annualSalary) > monthlyCost) {
        let monthlyCost = event.target.parentElement
        monthlyCost.style.backgroundColor = 'red'
     }
 
+}
+
+function deleteEmployee(event) { 
+    let parent = event.target.parentElement
+    parent.remove()
 }
