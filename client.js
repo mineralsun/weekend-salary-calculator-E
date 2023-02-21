@@ -1,6 +1,8 @@
 console.log('Yo waddup');
 //Possible Global Variabls?
 
+let monthlyCost = 20000
+
 function submitForm(event) {
     console.log(submitForm);
     event.preventDefault();
@@ -27,13 +29,11 @@ employeeInfoTable.innerHTML += `
     </tr>
 
 `;
-
-    let monthlyCost = 20000
-    if (Number(annualSalary) > monthlyCost) {
-       let monthlyCost = event.target.parentElement
-       monthlyCost.style.backgroundColor = 'red'
-    }
-
+let monthlyCostSpan = document.querySelector('#monthly-cost')
+if (Number(annualSalary) > monthlyCost) {
+    monthlyCostSpan.innerHTML = Number(annualSalary)
+    monthlyCostSpan.style.backgroundColor = 'red'
+ }
 }
 
 function deleteEmployee(event) { 
